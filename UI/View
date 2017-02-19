@@ -1,4 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
 
-#  Youtube link with full screen functionality
+<h2 class="w3-center">Madhavas Band</h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="http://www.thefamouspeople.com/profiles/images/a-c-bhaktivedanta-swami-prabhupada-3.jpg" style="width:100%">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/originals/27/90/9f/27909f6c5a726258e48363eb12c0bf22.jpg" style="width:100%">
+  <img class="mySlides" src="https://theharekrishnamovement.files.wordpress.com/2011/04/scan25a.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
 <iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=Madhavasrockband" allowfullscreen="allowfullscreen" width="800" height="580"></iframe>
 
+</body>
+</html>
